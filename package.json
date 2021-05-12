@@ -1,0 +1,50 @@
+{
+  "name": "@carbon/beacon-for-ibm-dotcom",
+  "description": "Beacon for IBM.com",
+  "version": "0.1.0",
+  "repository": "https://github.ibm.com/webstandards/beacon-for-ibm-dotcom",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "beacon": "lighthouse --config-path=src/config/custom-config.js",
+    "format": "prettier --write '**/*.{js,md}'",
+    "format:diff": "prettier --list-different '**/*.{js,md}'",
+    "lint": "yarn lint:src && yarn lint:dist",
+    "lint:src": "yarn lint:license:src && yarn lint:scripts",
+    "lint:dist": "yarn lint:license:dist",
+    "lint:license:src": "gulp lint:license:src",
+    "lint:license:dist": "gulp lint:license:dist",
+    "lint:scripts": "eslint --ext .js .",
+    "lint:license:staged": "tools/check-license.js -w",
+    "lint:scripts:staged": "eslint"
+  },
+  "dependencies": {
+    "lighthouse": "^7.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "@formatjs/icu-messageformat-parser": "1.1.5",
+    "babel-eslint": "10.1.0",
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jsdoc": "32.3.0",
+    "eslint-plugin-prettier": "3.3.1",
+    "eslint-plugin-tree-shaking": "1.8.0",
+    "eslint-restricted-globals": "0.2.0",
+    "fs-extra": "^9.0.0",
+    "gitignore-to-glob": "^0.3.0",
+    "globby": "^11.0.3",
+    "gulp": "4.0.2",
+    "husky": "^4.2.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1"
+  }
+}
