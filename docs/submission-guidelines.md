@@ -20,7 +20,7 @@ features, by not reporting duplicate issues.
 
 ## Submitting a Contribution
 
-- [Development guide](https://github.ibm.com/webstandards/beacon-for-ibm-dotcom/blob/main/docs/developing.md)
+- [Development guide](https://github.com/IBM/beacon-for-ibm-dotcom/blob/main/docs/developing.md)
 
 ## When a Pull Request is opened
 

@@ -2,7 +2,7 @@
   "name": "@carbon/beacon-for-ibm-dotcom",
   "description": "Beacon for IBM.com",
   "version": "0.1.0",
-  "repository": "https://github.ibm.com/webstandards/beacon-for-ibm-dotcom",
+  "repository": "https://github.com/IBM/beacon-for-ibm-dotcom",
   "license": "Apache-2.0",
   "engines": {
     "node": "12.x"

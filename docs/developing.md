@@ -20,7 +20,7 @@ contributing back to the repository. This includes regular team
 members/maintainers.
 
 1. Fork the project by navigating to the main
-   [repository](https://github.ibm.com/webstandards/beacon-for-ibm-dotcom/) and
+   [repository](https://github.com/IBM/beacon-for-ibm-dotcom/) and
    clicking the **Fork** button on the top-right corner.
 
 2. Navigate to your forked repository and copy the **SSH url**. Clone your fork
@@ -64,7 +64,7 @@ addition, it allows us to link between packages that we are developing.
 
 Afterwards, you should be good to go! For more information about how we handle
 dependencies, definitely take a look at our write-up
-[here](https://github.ibm.com/webstandards/beacon-for-ibm-dotcom/blob/main/docs/dependencies.md).
+[here](https://github.com/IBM/beacon-for-ibm-dotcom/blob/main/docs/dependencies.md).
 
 ## Common tasks
 
@@ -124,7 +124,7 @@ want to run:
    ```
 
 7. In Github, navigate to
-   [https://github.ibm.com/webstandards/beacon-for-ibm-dotcom](https://github.ibm.com/webstandards/beacon-for-ibm-dotcom/pulls)
+   [https://github.com/IBM/beacon-for-ibm-dotcom](https://github.com/IBM/beacon-for-ibm-dotcom/pulls)
    to create a pull request.
 
 8. Write a title and description, then click "Create pull request".

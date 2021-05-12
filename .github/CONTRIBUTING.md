@@ -28,6 +28,6 @@ fit within the scope of any of the existing doc fix projects.
 
 ## Submission Guidelines
 
-Read more about our [submission guidelines](https://github.ibm.com/webstandards/beacon-for-ibm-dotcom/blob/main/docs/submission-guidelines.md).
+Read more about our [submission guidelines](https://github.com/IBM/beacon-for-ibm-dotcom/blob/main/docs/submission-guidelines.md).
 
 **Thank you for your contribution!**
