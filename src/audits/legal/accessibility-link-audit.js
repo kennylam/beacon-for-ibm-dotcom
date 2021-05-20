@@ -42,7 +42,7 @@ class LegalLinksAudit extends Audit {
    */
   static audit(artifacts) {
     const loadMetrics = artifacts.CheckLegalLinks.filter((link) => {
-      return link.node.nodeLabel === 'Accessibility';
+      return link.dataAutoid === 'dds--footer-legal-nav__link-accessibility';
     });
 
     const hasAccessibility = loadMetrics.length !== 0;

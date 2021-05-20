@@ -28,7 +28,9 @@ function getLegalLinksInDOM() {
 
     // check if the data-autoid is one of a legal link or specifically the cookie preferences link
     if (
-      dataAutoid === 'dds--footer-legal-nav__link' ||
+      dataAutoid === 'dds--footer-legal-nav__link-privacy' ||
+      dataAutoid === 'dds--footer-legal-nav__link-terms-of-use' ||
+      dataAutoid === 'dds--footer-legal-nav__link-accessibility' ||
       dataAutoid === 'dds--privacy-cp__link'
     ) {
       linkElements.push({

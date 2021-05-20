@@ -42,7 +42,7 @@ class LegalLinksAudit extends Audit {
    */
   static audit(artifacts) {
     const loadMetrics = artifacts.CheckLegalLinks.filter((link) => {
-      return link.node.nodeLabel === 'Terms of use';
+      return link.dataAutoid === 'dds--footer-legal-nav__link-terms-of-use';
     });
 
     const hasTermsOfUse = loadMetrics.length !== 0;
