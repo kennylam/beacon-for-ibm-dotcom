@@ -9,6 +9,7 @@
   },
   "scripts": {
     "beacon": "lighthouse --config-path=src/config/custom-config.js",
+    "ci-check": "format:diff && lint:src",
     "format": "prettier --write '**/*.{js,md}'",
     "format:diff": "prettier --list-different '**/*.{js,md}'",
     "lint": "yarn lint:src && yarn lint:dist",
