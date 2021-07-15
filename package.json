@@ -5,11 +5,11 @@
   "repository": "https://github.com/IBM/beacon-for-ibm-dotcom",
   "license": "Apache-2.0",
   "engines": {
-    "node": "12.x"
+    "node": "12 || 14"
   },
   "scripts": {
     "beacon": "lighthouse --config-path=src/config/custom-config.js",
-    "ci-check": "format:diff && lint:src",
+    "ci-check": "npm run format:diff && yarn lint:src",
     "format": "prettier --write '**/*.{js,md}'",
     "format:diff": "prettier --list-different '**/*.{js,md}'",
     "lint": "yarn lint:src && yarn lint:dist",
