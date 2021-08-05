@@ -23,7 +23,7 @@ const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
 const maxHeadingLength = 65;
 
 /**
- * @file Audits if Card uses recommended character count for heading.
+ * @file Audits the recommended amount of characters in the `card` component heading.
  */
 class CarbonForIBMDotcomAudit extends Audit {
   /**

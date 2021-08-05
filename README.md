@@ -13,7 +13,7 @@ experience when visiting our sites. Please visit
 [Carbon for IBM.com](https://www.ibm.com/standards/web/carbon-for-ibm-dotcom/)
 for more information on designing and developing for IBM.com.
 
-## Usage
+## Getting started
 
 At its core, Beacon will run a preset number of audits on a page. The simplest
 way to run an audit is
@@ -26,3 +26,8 @@ By default, the results are written to an HTML file in the root directory. Since
 Beacon is powered by Lighthouse, there are a plenty of built-in
 [CLI options](https://github.com/GoogleChrome/lighthouse#cli-options) available
 to customize the output.
+
+## Usage
+
+A full list of available audits can be seen
+[here](https://ibm.github.io/beacon-for-ibm-dotcom/).

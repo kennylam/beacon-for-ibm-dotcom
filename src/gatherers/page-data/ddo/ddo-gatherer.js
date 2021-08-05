@@ -9,7 +9,9 @@
 const Gatherer = require('lighthouse').Gatherer;
 
 /**
+ * Gatherer to return the DDO (Digital Data Object) if present on page.
  *
+ * @returns {object} Digital Data Object
  */
 class CheckDDO extends Gatherer {
   /**

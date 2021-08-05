@@ -19,7 +19,7 @@ const UIStrings = {
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
 
 /**
- * @file Audits if page contains the Terms of use legal link
+ * @file Audits if page contains the `Terms of use` link in the `footer` component.
  */
 class LegalLinksAudit extends Audit {
   /**

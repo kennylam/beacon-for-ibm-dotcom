@@ -23,7 +23,7 @@ const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
 const maxHeadingLength = 40;
 
 /**
- * @file Audits if Content Block heading uses recommended amount of characters.
+ * @file Audits the recommended amount of characters in the `content-block` component heading.
  */
 class CarbonForIBMDotcomAudit extends Audit {
   /**

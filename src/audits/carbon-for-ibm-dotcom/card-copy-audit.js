@@ -22,7 +22,7 @@ const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
 const maxCopyLength = 200;
 
 /**
- * @file Audits if Card has recommended character count for copy
+ * @file Audits the recommended amount of characters in the `card` component copy.
  */
 class CarbonForIBMDotcomAudit extends Audit {
   /**

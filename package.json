@@ -12,6 +12,7 @@
     "ci-check": "npm run format:diff && yarn lint:src",
     "format": "prettier --write '**/*.{js,md}'",
     "format:diff": "prettier --list-different '**/*.{js,md}'",
+    "jsdoc": "rimraf docs && jsdoc -c ./jsdoc.json ./README.md",
     "lint": "yarn lint:src && yarn lint:dist",
     "lint:src": "yarn lint:license:src && yarn lint:scripts",
     "lint:dist": "yarn lint:license:dist",
@@ -45,7 +46,10 @@
     "globby": "^11.0.3",
     "gulp": "4.0.2",
     "husky": "^4.2.0",
+    "jsdoc": "^3.6.7",
     "lint-staged": "^10.5.4",
-    "prettier": "^2.2.1"
+    "node-fetch": "^2.6.1",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2"
   }
 }

@@ -7,21 +7,28 @@
 'use strict';
 
 const Audit = require('lighthouse').Audit;
+const fetch = require('node-fetch');
 const i18n = require('../../../../node_modules/lighthouse/lighthouse-core/lib/i18n/i18n.js');
 
 const UIStrings = {
-  title: 'Carbon for IBM.com version is up to date.',
-  failureTitle: 'Carbon for IBM.com version is outdated.',
+  title: 'Using latest stable version of Carbon for IBM.com.',
+  failureTitle: 'Not using latest stable version of Carbon for IBM.com.',
   description:
     'This property shows what Carbon for IBM.com package is being used on a page, as well as the version. This information can be helpful in troubleshooting bugs when authoring with Carbon for IBM.com packages. [Learn more](https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/master/docs/building-for-ibm-dotcom.md#digital-data-object).',
 };
 
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
 
-const currentVersion = 20;
+// Get latest version of Carbon for IBM.com
+let latestVersion;
+fetch(
+  'https://api.github.com/repos/carbon-design-system/carbon-for-ibm-dotcom/releases/latest'
+)
+  .then((response) => response.json())
+  .then((data) => (latestVersion = data.name));
 
 /**
- * @file Audits if page contains the IBM Digital Data Object (DDO)
+ * @file Audits if page is using the latest stable version of Carbon for IBM.com.
  */
 class DDOAudit extends Audit {
   /**
@@ -45,14 +52,12 @@ class DDOAudit extends Audit {
   static audit(artifacts) {
     const loadMetrics = artifacts.CheckDDO.page.pageInfo.version;
     const hasVersion = typeof loadMetrics !== 'undefined';
-
-    const versionNumber = parseInt(loadMetrics.split(' ').pop().split('.')[1]);
-    const versionDiff = currentVersion - versionNumber;
+    const versionDiff = latestVersion !== loadMetrics;
 
     // binary scoring
     const score = !versionDiff ? 1 : 0;
     const displayString = versionDiff
-      ? `Carbon for IBM.com package is ${versionDiff} version behind`
+      ? `The latest stable version of Carbon for IBM.com is ${latestVersion}. This page is using ${loadMetrics}.`
       : '';
 
     return {

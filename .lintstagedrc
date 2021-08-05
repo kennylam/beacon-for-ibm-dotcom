@@ -1,11 +1,9 @@
 {
   "**/*.js": [
     "prettier --write",
-    "eslint --ext .js .",
-    "git add"
+    "eslint --ext .js ."
   ],
   "*.md": [
-    "prettier --write",
-    "git add"
+    "prettier --write"
   ]
 }

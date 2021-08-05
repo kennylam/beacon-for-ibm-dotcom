@@ -46,12 +46,7 @@ const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
 module.exports = {
   extends: 'lighthouse:default',
   settings: {
-    onlyCategories: [
-      'legal',
-      'page-data',
-      'page-content',
-      'carbon-for-ibm-dotcom',
-    ],
+    onlyCategories: ['legal', 'page-data', 'carbon-for-ibm-dotcom'],
   },
   passes: [
     {
@@ -61,8 +56,6 @@ module.exports = {
         `${constants.paths.gatherer}/legal/legal-links-gatherer`,
         `${constants.paths.gatherer}/carbon-for-ibm-dotcom/components-gatherer`,
         `${constants.paths.gatherer}/carbon-for-ibm-dotcom/v18-gatherer`,
-        // `${constants.paths.gatherer}/page-data/lang-attribute-gatherer`,
-        // `${constants.paths.gatherer}/page-content/scripts-gatherer`,
       ],
     },
   ],
@@ -86,7 +79,6 @@ module.exports = {
     `${constants.paths.audit}/carbon-for-ibm-dotcom/card-eyebrow-audit`,
     `${constants.paths.audit}/carbon-for-ibm-dotcom/card-heading-audit`,
     `${constants.paths.audit}/carbon-for-ibm-dotcom/card-copy-audit`,
-    // `${constants.paths.audit}/page-data/lang-attribute-audit`,
   ],
   groups: {
     'digital-data-object': {
@@ -197,11 +189,5 @@ module.exports = {
         },
       ],
     },
-    // 'page-content': {
-    //   title: str_(UIStrings.pageContentCategoryTitle),
-    //   auditRefs: [
-    //     { id: 'lang-attribute-audit', weight: 1, group: 'northstar' },
-    //   ],
-    // },
   },
 };

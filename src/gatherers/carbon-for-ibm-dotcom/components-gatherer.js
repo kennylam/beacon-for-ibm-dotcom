@@ -10,7 +10,7 @@ const Gatherer = require('lighthouse').Gatherer;
 const pageFunctions = require('../../../node_modules/lighthouse/lighthouse-core/lib/page-functions.js');
 
 /**
- * Gets the Carbon for IBM.com components in the DOM based off of the data-autoids
+ * Gets the Carbon for IBM.com components in the DOM DOM based on `data-autoid` attribute.
  *
  * @returns {Array} array of Carbon for IBM.com components
  */
@@ -40,12 +40,12 @@ function getComponentsInDOM() {
 }
 
 /**
- * Gatherer to return Carbon for IBM.com Components on the page
+ * Gatherer to return Carbon for IBM.com components (`data-autoid=dds-*`) found on page.
  */
 class CheckComponents extends Gatherer {
   /**
    * @param {object} passContext passContext object
-   * @returns {Promise} promise of elements from DOM
+   * @returns {Promise} promise of Carbon for IBM.com components found in DOM
    */
   static getComponentsInDOM(passContext) {
     // We'll use evaluateAsync because the `node.getAttribute` method doesn't actually normalize
