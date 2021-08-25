@@ -10,7 +10,7 @@ const Gatherer = require('lighthouse').Gatherer;
 const pageFunctions = require('../../../node_modules/lighthouse/lighthouse-core/lib/page-functions.js');
 
 /**
- * Gets the v18 scripts and classes that are loaded on the page
+ * Gets v18 scripts and CSS classes found on the page.
  *
  * @returns {Array} array of v18 classes loaded on the page
  */
@@ -50,12 +50,13 @@ function getScriptsInDom() {
 }
 
 /**
- * Gatherer to return Northstar v18 classes loaded on the page
+ * Gatherer to determine if Northstar v18 is imported into the page.
+ * If true, return any v18 CSS classes found.
  */
 class CheckV18 extends Gatherer {
   /**
    * @param {object} passContext passContext object
-   * @returns {Promise} promise of elements from DOM
+   * @returns {Promise} promise of Northstar v18 scripts found loaded on the page
    */
   static getScriptsInDom(passContext) {
     // We'll use evaluateAsync because the `node.getAttribute` method doesn't actually normalize

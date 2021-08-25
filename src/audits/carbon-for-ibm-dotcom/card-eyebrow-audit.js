@@ -23,7 +23,7 @@ const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
 const maxEyebrowLength = 25;
 
 /**
- * @file Audits if Card uses recommended character count for eyebrow
+ * @file Audits the recommended amount of characters in the `card` component eyebrow.
  */
 class CarbonForIBMDotcomAudit extends Audit {
   /**

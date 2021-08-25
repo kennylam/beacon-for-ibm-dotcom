@@ -23,7 +23,7 @@ const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
 const maxDescriptionLength = 120;
 
 /**
- * @file Audits if page contains the Leadspace description contains the appropiate amount of characters.
+ * @file Audits the recommended amount of characters in the `leadspace` component description.
  */
 class CarbonForIBMDotcomAudit extends Audit {
   /**

@@ -23,7 +23,7 @@ const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
 const maxHeadingLength = 65;
 
 /**
- * @file Audits if Leadspace heading uses recommended amount of characters
+ * @file Audits the recommended amount of characters in the `leadspace` component heading.
  */
 class CarbonForIBMDotcomAudit extends Audit {
   /**

@@ -20,7 +20,7 @@ const UIStrings = {
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
 
 /**
- * @file Audits if page contains the IBM Digital Data Object (DDO)
+ * @file Audits if page contains the `masthead` component.
  */
 class CarbonForIBMDotcomAudit extends Audit {
   /**

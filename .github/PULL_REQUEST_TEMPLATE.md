@@ -21,12 +21,3 @@
 **Removed**
 
 - {{removed thing}}
-
-<!-- React and Web Component deploy previews are enabled by default. -->
-<!-- To enable additional available deploy previews, apply the following -->
-<!-- labels for the corresponding package: -->
-<!-- *** "package: services": Services -->
-<!-- *** "package: utilities": Utilities -->
-<!-- *** "package: styles": Carbon Expressive -->
-<!-- *** "RTL": React / Web Components (RTL) -->
-<!-- *** "feature flag": React / Web Components (experimental) -->

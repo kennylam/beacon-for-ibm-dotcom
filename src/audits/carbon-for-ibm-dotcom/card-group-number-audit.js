@@ -23,7 +23,7 @@ const minCardTotal = 2;
 const maxCardTotal = 6;
 
 /**
- * @file Audits if page's Card Group has recommended item limit
+ * @file Audits the recommended number of items in the `card-group` component.
  */
 class CarbonForIBMDotcomAudit extends Audit {
   /**

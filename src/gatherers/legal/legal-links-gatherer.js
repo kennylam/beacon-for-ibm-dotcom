@@ -10,9 +10,9 @@ const Gatherer = require('lighthouse').Gatherer;
 const pageFunctions = require('../../../node_modules/lighthouse/lighthouse-core/lib/page-functions.js');
 
 /**
- * Gets the Legal links in the DOM based off of the data-autoids
+ * Gets the legal links in the DOM based on `data-autoid` attribute.
  *
- * @returns {Array} array of legal links on the page
+ * @returns {Array} array of legal links in the Carbon for IBM.com `footer` component
  */
 function getLegalLinksInDOM() {
   // @ts-expect-error - getElementsInDocument put into scope via stringification
@@ -53,12 +53,12 @@ function getLegalLinksInDOM() {
 }
 
 /**
- * Gatherer to return Legal links from Footer
+ * Gatherer to return legal links found in the Carbon for IBM.com `footer` component.
  */
 class CheckLegalLinks extends Gatherer {
   /**
    * @param {object} passContext passContext object
-   * @returns {Promise} promise of links from DOM
+   * @returns {Promise} promise of legal links found in the Carbon for IBM.com `footer` component
    */
   static getLegalLinksInDOM(passContext) {
     // We'll use evaluateAsync because the `node.getAttribute` method doesn't actually normalize

@@ -23,7 +23,7 @@ const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
 const maxQuoteLength = 200;
 
 /**
- * @file Audits if Callout Quote contains recommended amount of characters.
+ * @file Audits the recommended amount of characters in the `callout-quote` component.
  */
 class CarbonForIBMDotcomAudit extends Audit {
   /**

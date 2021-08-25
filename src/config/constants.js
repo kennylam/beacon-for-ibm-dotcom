@@ -7,7 +7,8 @@
 'use strict';
 
 /**
- * Set paths for audits and gatherers
+ * @constant Set paths for audits and gatherers.
+ * @ignore
  */
 const AUDIT_PATH = '../audits';
 const GATHERER_PATH = '../gatherers';

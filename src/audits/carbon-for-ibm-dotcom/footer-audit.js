@@ -20,7 +20,7 @@ const UIStrings = {
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
 
 /**
- * @file Audits if page contains the Footer
+ * @file Audits if page contains the `footer` component.
  */
 class CarbonForIBMDotcomAudit extends Audit {
   /**
