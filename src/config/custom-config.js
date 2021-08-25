@@ -39,6 +39,9 @@ const UIStrings = {
   carbonForIBMDotcomTitle: 'Carbon for IBM.com',
   carbonForIBMDotcomDescription:
     'Carbon for IBM.com is the open source design system for IBM.com’s digital experiences. The system consists of working code, design tools, and resources and is tailored to IBM.com website page makers.',
+  carbonDesignSystemTitle: 'Carbon Design System',
+  carbonDesignSystemDescription:
+    'Carbon is IBM’s open source design system for products and digital experiences. With the IBM Design Language as its foundation, the system consists of working code, design tools and resources, human interface guidelines, and a vibrant community of contributors.',
 };
 
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
@@ -46,7 +49,12 @@ const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
 module.exports = {
   extends: 'lighthouse:default',
   settings: {
-    onlyCategories: ['legal', 'page-data', 'carbon-for-ibm-dotcom'],
+    onlyCategories: [
+      'legal',
+      'page-data',
+      'carbon-for-ibm-dotcom',
+      'carbon-design-system',
+    ],
   },
   passes: [
     {
@@ -79,6 +87,8 @@ module.exports = {
     `${constants.paths.audit}/carbon-for-ibm-dotcom/card-eyebrow-audit`,
     `${constants.paths.audit}/carbon-for-ibm-dotcom/card-heading-audit`,
     `${constants.paths.audit}/carbon-for-ibm-dotcom/card-copy-audit`,
+    `${constants.paths.audit}/carbon-design-system/color-usage-audit`,
+    `${constants.paths.audit}/carbon-design-system/text-usage-audit`,
   ],
   groups: {
     'digital-data-object': {
@@ -96,6 +106,10 @@ module.exports = {
     'carbon-for-ibm-dotcom': {
       title: UIStrings.carbonForIBMDotcomTitle,
       description: str_(UIStrings.carbonForIBMDotcomDescription),
+    },
+    'carbon-design-system': {
+      title: UIStrings.carbonDesignSystemTitle,
+      description: str_(UIStrings.carbonDesignSystemDescription),
     },
   },
   categories: {
@@ -186,6 +200,21 @@ module.exports = {
           id: 'v18-audit',
           weight: 3,
           group: 'carbon-for-ibm-dotcom',
+        },
+      ],
+    },
+    'carbon-design-system': {
+      title: 'Carbon Design System',
+      auditRefs: [
+        {
+          id: 'color-usage-audit',
+          weight: 1,
+          group: 'carbon-design-system',
+        },
+        {
+          id: 'text-usage-audit',
+          weight: 1,
+          group: 'carbon-design-system',
         },
       ],
     },
