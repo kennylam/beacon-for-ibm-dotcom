@@ -1,8 +1,6 @@
-<h1 align="center">
-  Beacon for IBM.com
-</h1>
+# beacon-for-ibm-dotcom
 
-> Beacon for IBM.com analyzes web apps and pages for compliance with IBM.com web
+> Beacon for IBM.com analyzes web pages for compliance with IBM.com web
 > standards, the IBM Design Language, and best practices.
 
 Beacon for IBM.com leverages Google
@@ -15,11 +13,21 @@ for more information on designing and developing for IBM.com.
 
 ## Getting started
 
-At its core, Beacon will run a preset number of audits on a page. The simplest
-way to run an audit is
+```bash
+npm i beacon-for-ibm-dotcom
+```
+
+If you prefer [Yarn](https://yarnpkg.com/en/), use the following command
+instead:
 
 ```bash
-yarn beacon https://www.ibm.com
+yarn add beacon-for-ibm-dotcom
+```
+
+## Usage
+
+```bash
+beacon-for-ibm-dotcom -u https://www.ibm.com
 ```
 
 By default, the results are written to an HTML file in the root directory. Since
@@ -27,7 +35,26 @@ Beacon is powered by Lighthouse, there are a plenty of built-in
 [CLI options](https://github.com/GoogleChrome/lighthouse#cli-options) available
 to customize the output.
 
-## Usage
+> Note: Beacon for IBM.com uses custom audits to ensure compliance with IBM.com
+> web standards and is meant to be used on IBM.com sites only. For general web
+> audits please use Google Lighthouse, which is available as an
+> [npm package](https://www.npmjs.com/package/lighthouse) and built-in Chrome
+> extension.
+
+### Options
+
+```
+$ beacon-for-ibm-dotcom --help
+
+beacon-for-ibm-dotcom -u <url> [options]
+
+URL:
+  --url, -u       URL to audit [required]
+
+Output:
+  --output, -o    Output format. Supports 'html', 'json', 'csv'. [Default: 'html']
+  --raw, -r       Output results in raw format.
+```
 
 A full list of available audits can be seen
 [here](https://ibm.github.io/beacon-for-ibm-dotcom/).

@@ -6,8 +6,9 @@
  */
 'use strict';
 
+const constants = require('../../config/constants');
 const Gatherer = require('lighthouse').Gatherer;
-const pageFunctions = require('../../../node_modules/lighthouse/lighthouse-core/lib/page-functions.js');
+const pageFunctions = require(constants.paths.pageFunctions);
 
 /**
  * Gets the legal links in the DOM based on `data-autoid` attribute.

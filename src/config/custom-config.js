@@ -6,11 +6,9 @@
  */
 'use strict';
 
-/* eslint-disable max-len */
-
 const constants = require('./constants.js');
 // Provides localization of titles and descriptions.
-const i18n = require('../../node_modules/lighthouse/lighthouse-core/lib/i18n/i18n.js');
+const i18n = require(constants.paths.i18n);
 
 const UIStrings = {
   digitalDataObjectGroupTitle: 'Digital Data Object',

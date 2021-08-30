@@ -8,7 +8,8 @@
 
 const Audit = require('lighthouse').Audit;
 const fetch = require('node-fetch');
-const i18n = require('../../../../node_modules/lighthouse/lighthouse-core/lib/i18n/i18n.js');
+const constants = require('../../../config/constants');
+const i18n = require(constants.paths.i18n);
 
 const UIStrings = {
   title: 'Using latest stable version of Carbon for IBM.com.',
