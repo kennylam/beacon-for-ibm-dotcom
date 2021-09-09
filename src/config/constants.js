@@ -14,13 +14,11 @@ const path = require('path');
  */
 const AUDIT_PATH = path.join(__dirname, '../audits');
 const GATHERER_PATH = path.join(__dirname, '../gatherers');
-const I18N_PATH = path.join(
-  __dirname,
-  '../../../lighthouse/lighthouse-core/lib/i18n/i18n.js'
+const I18N_PATH = require.resolve(
+  'lighthouse/lighthouse-core/lib/i18n/i18n.js'
 );
-const PAGE_FUNCTIONS = path.join(
-  __dirname,
-  '../../../lighthouse/lighthouse-core/lib/page-functions.js'
+const PAGE_FUNCTIONS = require.resolve(
+  'lighthouse/lighthouse-core/lib/page-functions.js'
 );
 
 const paths = {
