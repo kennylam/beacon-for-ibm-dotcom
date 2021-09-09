@@ -20,7 +20,7 @@ const reLicenseText = require('../tasks/license-text');
 const promisifyStream = promisify(asyncDone);
 
 /**
- * @returns {NodeJS.ReadWriteStream} A Gulp plugin that checks if the Vinyl file content has a license header.
+ * @returns {*} A Gulp plugin that checks if the Vinyl file content has a license header.
  */
 const gulpCheckLicense = () => {
   const filesWithError = [];
