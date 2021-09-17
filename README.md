@@ -57,4 +57,4 @@ Output:
 ```
 
 A full list of available audits can be seen
-[here](https://ibm.github.io/beacon/).
+[here](https://ibm.github.io/beacon-for-ibm-dotcom/).
