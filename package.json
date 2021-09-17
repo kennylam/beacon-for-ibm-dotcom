@@ -1,5 +1,5 @@
 {
-  "name": "beacon-for-ibm-dotcom",
+  "name": "@ibmdotcom/beacon",
   "description": "Beacon for IBM.com",
   "version": "0.3.0",
   "repository": "https://github.com/IBM/beacon-for-ibm-dotcom",
@@ -9,10 +9,10 @@
   },
   "main": "index.js",
   "bin": {
-    "beacon-for-ibm-dotcom": "./cli.js"
+    "beacon": "./cli.js"
   },
   "scripts": {
-    "beacon-for-ibm-dotcom": "lighthouse --config-path=src/config/custom-config.js",
+    "beacon": "lighthouse --config-path=src/config/custom-config.js",
     "ci-check": "npm run format:diff && yarn lint:src",
     "format": "prettier --write '**/*.{js,md}'",
     "format:diff": "prettier --list-different '**/*.{js,md}'",

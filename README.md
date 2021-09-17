@@ -1,4 +1,4 @@
-# beacon-for-ibm-dotcom
+# @ibmdotcom/beacon
 
 > Beacon for IBM.com analyzes web pages for compliance with IBM.com web
 > standards, the IBM Design Language, and best practices.
@@ -14,20 +14,20 @@ for more information on designing and developing for IBM.com.
 ## Getting started
 
 ```bash
-npm i beacon-for-ibm-dotcom
+npm i @ibmdotcom/beacon
 ```
 
 If you prefer [Yarn](https://yarnpkg.com/en/), use the following command
 instead:
 
 ```bash
-yarn add beacon-for-ibm-dotcom
+yarn add @ibmdotcom/beacon
 ```
 
 ## Usage
 
 ```bash
-beacon-for-ibm-dotcom -u https://www.ibm.com
+beacon -u https://www.ibm.com
 ```
 
 By default, the results are written to an HTML file in the root directory. Since
@@ -44,9 +44,9 @@ to customize the output.
 ### Options
 
 ```
-$ beacon-for-ibm-dotcom --help
+$ beacon --help
 
-beacon-for-ibm-dotcom -u <url> [options]
+beacon -u <url> [options]
 
 URL:
   --url, -u       URL to audit [required]
