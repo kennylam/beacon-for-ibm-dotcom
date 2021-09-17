@@ -14,7 +14,7 @@ const chromeLauncher = require('chrome-launcher');
  * @param {object} args Command line options
  * @param {string} args.url URL to run Lighthouse on
  * @param {string} args.output Output format. Supports 'html', 'json', and 'csv'. Default is 'html'.
- * @example beacon-for-ibm-dotcom --url "https://example.com" --output json
+ * @example beacon --url "https://example.com" --output json
  * @returns {*} Raw output as a string if --raw is passed, otherwise outputs to stdout.
  */
 module.exports = (args) => {
