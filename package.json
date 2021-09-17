@@ -1,5 +1,5 @@
 {
-  "name": "beacon-for-ibm-dotcom",
+  "name": "@ibmdotcom/beacon-for-ibm-dotcom",
   "description": "Beacon for IBM.com",
   "version": "0.3.0",
   "repository": "https://github.com/IBM/beacon-for-ibm-dotcom",
