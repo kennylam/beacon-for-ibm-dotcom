@@ -11,6 +11,9 @@
   "bin": {
     "beacon": "./cli.js"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "beacon": "lighthouse --config-path=src/config/custom-config.js",
     "ci-check": "npm run format:diff && yarn lint:src",
