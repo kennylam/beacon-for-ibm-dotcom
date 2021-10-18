@@ -17,14 +17,16 @@ const pageFunctions = require(constants.paths.pageFunctions);
  */
 function getLegalLinksInDOM() {
   // @ts-expect-error - getElementsInDocument put into scope via stringification
-  const browserElements = getElementsInDocument('a'); // eslint-disable-line no-undef
+  const browserElements = document.querySelectorAll(
+    '.bx--legal-nav__holder [data-autoid]'
+  );
   const linkElements = [];
 
   for (const link of browserElements) {
     if (!(link instanceof HTMLElement)) continue;
 
     const hrefRaw = link.getAttribute('href') || '';
-    const dataAutoid = link.getAttribute('data-autoid') || '';
+    const dataAutoid = link.dataset.autoid || '';
     const source = link.closest('head') ? 'head' : 'body';
 
     // check if the data-autoid is one of a legal link or specifically the cookie preferences link
@@ -32,7 +34,7 @@ function getLegalLinksInDOM() {
       dataAutoid === 'dds--footer-legal-nav__link-privacy' ||
       dataAutoid === 'dds--footer-legal-nav__link-terms-of-use' ||
       dataAutoid === 'dds--footer-legal-nav__link-accessibility' ||
-      dataAutoid === 'dds--privacy-cp__link'
+      dataAutoid === 'dds--privacy-cp'
     ) {
       linkElements.push({
         rel: link.rel,
@@ -67,10 +69,7 @@ class CheckLegalLinks extends Gatherer {
     return passContext.driver.executionContext.evaluate(getLegalLinksInDOM, {
       args: [],
       useIsolation: true,
-      deps: [
-        pageFunctions.getNodeDetailsString,
-        pageFunctions.getElementsInDocument,
-      ],
+      deps: [pageFunctions.getNodeDetailsString],
     });
   }
 
