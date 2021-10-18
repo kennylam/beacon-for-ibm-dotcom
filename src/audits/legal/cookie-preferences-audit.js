@@ -43,7 +43,7 @@ class LegalLinksAudit extends Audit {
    */
   static audit(artifacts) {
     const loadMetrics = artifacts.CheckLegalLinks.filter((link) => {
-      return link.dataAutoid === 'dds--privacy-cp__link';
+      return link.dataAutoid === 'dds--privacy-cp';
     });
     const hasCookiePreferences = loadMetrics.length !== 0;
 
