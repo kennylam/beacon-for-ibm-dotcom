@@ -12,10 +12,11 @@ const constants = require('../../../config/constants');
 const i18n = require(constants.paths.i18n);
 
 const UIStrings = {
-  title: 'Using latest stable version of Carbon for IBM.com.',
-  failureTitle: 'Not using latest stable version of Carbon for IBM.com.',
+  title: 'This page is using the latest version of Carbon for IBM.com.',
+  failureTitle:
+    'This page is not using the latest version of Carbon for IBM.com.',
   description:
-    'This property shows what Carbon for IBM.com package is being used on a page, as well as the version. This information can be helpful in troubleshooting bugs when authoring with Carbon for IBM.com packages. [Learn more](https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/master/docs/building-for-ibm-dotcom.md#digital-data-object).',
+    'All Beacon audits are designed to run on the latest version of Carbon for IBM.com. If you are running audits against older versions, some audits may fail or they may give incomplete or inaccurate information. Keeping up with the latest version gives you access to the latest fixes and enhancements. Releases are non-breaking, unless noted otherwise.',
 };
 
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
@@ -59,7 +60,7 @@ class DDOAudit extends Audit {
     // binary scoring
     const score = !versionDiff ? 1 : 0;
     const displayString = versionDiff
-      ? `The latest stable version of Carbon for IBM.com is ${latestVersion}. This page is using ${loadMetrics}.`
+      ? `The latest version of Carbon for IBM.com is ${latestVersion}. This page is using ${loadMetrics}.`
       : '';
 
     return {
