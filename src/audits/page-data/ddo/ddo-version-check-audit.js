@@ -16,7 +16,7 @@ const UIStrings = {
   failureTitle:
     'This page is not using the latest version of Carbon for IBM.com.',
   description:
-    'All Beacon audits are designed to run on the latest version of Carbon for IBM.com. If you are running audits against older versions, some audits may fail or they may give incomplete or inaccurate information. Keeping up with the latest version gives you access to the latest fixes and enhancements. Releases are non-breaking, unless noted otherwise.',
+    'All Beacon audits are designed to run on the latest version of Carbon for IBM.com. If you are running audits against older versions, some audits may fail or they may give incomplete or inaccurate information. Keeping up with the latest version gives you access to the latest fixes and enhancements.',
 };
 
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
