@@ -30,7 +30,7 @@
     "lint:scripts:staged": "eslint"
   },
   "dependencies": {
-    "lighthouse": "^7.2.0",
+    "lighthouse": "^8.5.1",
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {
