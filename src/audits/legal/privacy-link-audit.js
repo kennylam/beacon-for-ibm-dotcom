@@ -11,10 +11,10 @@ const constants = require('../../config/constants');
 const i18n = require(constants.paths.i18n);
 
 const UIStrings = {
-  title: 'Link to IBM privacy policy exists.',
-  failureTitle: 'Link to IBM privacy policy does not exist.',
+  title: 'The link to the IBM privacy policy is included on the page.',
+  failureTitle: 'The link to IBM privacy policy is missing.',
   description:
-    'This is automatically included as part of the IBM Footer, but in case a custom implementation exists, this would potentially be omitted by the application team.',
+    'The link to IBM privacy policy is automatically included as part of the IBM Footer component. You must use the Carbon for IBM.com Footer component to ensure this and all footer links are included on the page.',
 };
 
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);

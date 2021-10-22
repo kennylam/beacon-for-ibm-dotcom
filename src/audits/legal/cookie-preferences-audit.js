@@ -11,10 +11,10 @@ const constants = require('../../config/constants');
 const i18n = require(constants.paths.i18n);
 
 const UIStrings = {
-  title: 'Cookie Preferences link exists.',
-  failureTitle: 'Cookie Preferences link does not exist.',
+  title: 'The Cookie Preferences link is included on the page.',
+  failureTitle: 'The Cookie Preferences link is missing.',
   description:
-    'This is automatically added through ibm-common.js, though there may be instances where an application team attempts to create their own footer, and/or not include the formal analytics artifact.',
+    'The Cookie Preferences link is automatically included as part of `ibm-common.js`. You must include `ibm-common.js` in the page to ensure that the Cookie Preferences link is present.',
 };
 
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
