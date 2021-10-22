@@ -11,11 +11,11 @@ const constants = require('../../../config/constants');
 const i18n = require(constants.paths.i18n);
 
 const UIStrings = {
-  title: 'Digital Data Object `version` property is set.',
+  title: 'The Digital Data Object `version` property is set.',
   failureTitle:
-    'Digital Data Object Carbon for IBM.com `version` property is missing.',
+    'The Digital Data Object Carbon for IBM.com `version` property is missing.',
   description:
-    'This property shows what Carbon for IBM.com package is being used on a page, as well as the version. This information can be helpful in troubleshooting bugs when authoring with Carbon for IBM.com packages. [Learn more](https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/master/docs/building-for-ibm-dotcom.md#digital-data-object).',
+    'The Digital Data Object version property shows what Carbon for IBM.com version is being used on a page. This information can be helpful in troubleshooting bugs when authoring with Carbon for IBM.com packages. [Learn more](https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/master/docs/building-for-ibm-dotcom.md#digital-data-object).',
 };
 
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);

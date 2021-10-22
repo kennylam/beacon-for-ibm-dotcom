@@ -11,10 +11,10 @@ const constants = require('../../../config/constants');
 const i18n = require(constants.paths.i18n);
 
 const UIStrings = {
-  title: 'Digital Data Object `country` property is set.',
-  failureTitle: 'Digital Data Object `country` property is missing.',
+  title: 'The Digital Data Object `country` property is set.',
+  failureTitle: 'The Digital Data Object `country` property is missing.',
   description:
-    'This property is used for localization and translation services. [Learn more](https://pages.github.ibm.com/digital-behavior/docs/stds-ddo.html#16-ibm-specific-page-information).',
+    'The Digital Data Object country property is used for localization and translation services. [Learn more](https://pages.github.ibm.com/digital-behavior/docs/stds-ddo.html#16-ibm-specific-page-information).',
 };
 
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
