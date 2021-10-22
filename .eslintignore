@@ -3,3 +3,4 @@ dist
 docs/js
 es
 node_modules
+.github/workflows

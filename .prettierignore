@@ -10,3 +10,4 @@ coverage
 jsdocs
 .yarn
 CHANGELOG.md
+.github/workflows
