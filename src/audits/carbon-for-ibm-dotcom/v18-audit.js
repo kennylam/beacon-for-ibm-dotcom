@@ -11,10 +11,10 @@ const constants = require('../../config/constants');
 const i18n = require(constants.paths.i18n);
 
 const UIStrings = {
-  title: 'Northstar v18 not loaded in this page.',
-  failureTitle: 'Northstar v18 found in this page.',
+  title: 'No v18 or v19a library files found on the page.',
+  failureTitle: 'Library files from v18 and/or v19a were found on this page.',
   description:
-    'Northstar v18 is currently planned to be sunset by the end of 2021, please start preparing to migrate to using Carbon for IBM.com. [Learn more](https://www.ibm.com/standards/web/carbon-for-ibm-dotcom/about/).',
+    'V18 and v19a will no longer be supported after December 2021. Continuing with these libraries may cause problems on the page in the future. To avoid issues, please remove all v18 and v19a library files and replace them with Carbon for IBM.com components. [Learn more](https://www.ibm.com/standards/carbon/all-about-carbon-for-ibm.com/get-started/).',
 };
 
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);

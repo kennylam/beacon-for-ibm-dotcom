@@ -11,11 +11,12 @@ const constants = require('../../config/constants');
 const i18n = require(constants.paths.i18n);
 
 const UIStrings = {
-  title: 'Carbon for IBM.com Card Group uses the recommended number of cards.',
+  title:
+    'The Carbon for IBM.com Card group component is using the recommended number of cards.',
   failureTitle:
-    'Carbon for IBM.com Card Group does not use the recommended number of cards.',
+    'The Carbon for IBM.com Card group component is not using the recommended number of cards.',
   description:
-    'The Card Group component has a recommended min/max number of cards to be included in the component. [Learn more](https://www.ibm.com/standards/web/carbon-for-ibm-dotcom/components/card-group).',
+    'The Card group component has a recommended minimum and maximum number of cards to be included. [Learn more](https://www.ibm.com/standards/web/carbon-for-ibm-dotcom/components/card-group).',
 };
 
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);

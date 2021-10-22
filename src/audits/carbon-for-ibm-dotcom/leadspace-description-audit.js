@@ -12,11 +12,11 @@ const i18n = require(constants.paths.i18n);
 
 const UIStrings = {
   title:
-    'Carbon for IBM.com Leadspace description uses the recommended character count.',
+    'The Carbon for IBM.com Leadspace component is using the recommended character count for the description.',
   failureTitle:
-    'Carbon for IBM.com Leadspace description does not use the recommended character count.',
+    'The Carbon for IBM.com Leadspace component is not using the recommended character count for the description.',
   description:
-    'The Leadspace component has a recommended max amount of characters to be used in the description. [Learn more](https://www.ibm.com/standards/web/carbon-for-ibm-dotcom/components/leadspace#content-guidance).',
+    'The Leadspace component has a recommended maximum number of characters for the description. See the [content guidance](https://www.ibm.com/standards/web/carbon-for-ibm-dotcom/components/leadspace#content-guidance) for more information.',
 };
 
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);

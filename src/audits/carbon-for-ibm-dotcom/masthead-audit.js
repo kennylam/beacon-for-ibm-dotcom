@@ -11,11 +11,10 @@ const constants = require('../../config/constants');
 const i18n = require(constants.paths.i18n);
 
 const UIStrings = {
-  title: 'Carbon for IBM.com Masthead component exists on the page',
-  failureTitle:
-    'Carbon for IBM.com Masthead component does not exist on the page.',
+  title: 'The Carbon for IBM.com Masthead component is in use on the page.',
+  failureTitle: 'The Carbon for IBM.com Masthead component is missing.',
   description:
-    'The Masthead component is a fundamental navigational component for IBM.com that displays consistently at the top of each page. [Learn more](https://www.ibm.com/standards/web/carbon-for-ibm-dotcom/components/masthead).',
+    'The Carbon for IBM.com Masthead component is a fundamental navigational component that is required at the top of every IBM.com page. [Learn more](https://www.ibm.com/standards/web/carbon-for-ibm-dotcom/components/masthead).',
 };
 
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);

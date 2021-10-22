@@ -11,11 +11,10 @@ const constants = require('../../config/constants');
 const i18n = require(constants.paths.i18n);
 
 const UIStrings = {
-  title: 'Carbon for IBM.com Footer component exists on the page',
-  failureTitle:
-    'Carbon for IBM.com Footer component does not exist on the page.',
+  title: 'The Carbon for IBM.com Footer component is in use on the page.',
+  failureTitle: 'The Carbon for IBM.com Footer component is missing.',
   description:
-    'The Footer component is a section that sits at the bottom of any IBM.com page, and acts as the catch—all section that helps users navigate and provides corporate level general and legal information. The footer is required on all pages on IBM.com. [Learn more](https://www.ibm.com/standards/web/carbon-for-ibm-dotcom/components/footer).',
+    'The Carbon for IBM.com Footer component is required on all pages on IBM.com. [Learn more](https://www.ibm.com/standards/web/carbon-for-ibm-dotcom/components/footer).',
 };
 
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
