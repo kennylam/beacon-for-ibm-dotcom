@@ -14,7 +14,7 @@ const UIStrings = {
   title: 'Carbon Design System color tokens are not being overwritten.',
   failureTitle: 'Carbon Design System color tokens are being overwritten.',
   description:
-    'Color token values must adhere to the guidelines specified by the Carbon Design System. [Learn more](https://www.carbondesignsystem.com/guidelines/color/usage/)',
+    'Color token values must adhere to the guidelines specified by the Carbon Design System. To address the issue, replace any hard-coded hex values with the correct color tokens. [Learn more](https://www.carbondesignsystem.com/guidelines/color/usage/)',
 };
 
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);

@@ -14,7 +14,7 @@ const UIStrings = {
   title: 'Carbon Design System typography tokens are not being overwritten.',
   failureTitle: 'Carbon Design System typography tokens are being overwritten.',
   description:
-    'Typography token values must adhere to the guidelines specified by the Carbon Design System. [Learn more](https://www.carbondesignsystem.com/guidelines/typography/overview)',
+    'Typography token values must adhere to the guidelines specified by the Carbon Design System. To address the issue, replace any hard-coded type values with the correct typography tokens. [Learn more](https://www.carbondesignsystem.com/guidelines/typography/overview)',
 };
 
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
