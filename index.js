@@ -30,7 +30,13 @@ module.exports = (args) => {
 async function runLightHouse(args) {
   try {
     const chrome = await chromeLauncher.launch({
-      chromeFlags: ['--headless', '--disable-gpu', '--no-sandbox'],
+      chromeFlags: [
+        '--headless',
+        '--disable-gpu',
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--enable-logging',
+      ],
     });
     const options = {
       logLevel: 'info',
