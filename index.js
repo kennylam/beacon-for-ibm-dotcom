@@ -34,7 +34,7 @@ async function runLightHouse(args) {
         '--headless',
         '--disable-gpu',
         '--no-sandbox',
-        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
         '--enable-logging',
       ],
     });
