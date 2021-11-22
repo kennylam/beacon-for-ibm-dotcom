@@ -1,0 +1,61 @@
+name: (Beacon for IBM.com team only) Audit Creation
+description:
+  Describe the audit that will need to be created in Beacon for IBM.com
+title: '[Audit Creation]: Audit description'
+labels: ['dev']
+body:
+  - type: dropdown
+    id: bucket
+    attributes:
+      label: Bucket
+      options:
+        - 'Page data'
+        - 'Legal'
+        - 'Carbon for IBM.com'
+        - 'Carbon Design System'
+        - 'New Bucket'
+    validations:
+      required: true
+  - type: input
+    id: new-bucket
+    attributes:
+      label: New bucket name
+  - type: textarea
+    id: audit-description
+    attributes:
+      label: Audit description
+      description: 'What should the audit be testing for compliance?'
+    validations:
+      required: true
+  - type: input
+    id: audit-success
+    attributes:
+      label: Audit success message
+      description: 'This message will appear if the audit passes.'
+    validations:
+      required: true
+  - type: input
+    id: audit-failure
+    attributes:
+      label: Audit failure message
+      description: 'This message will appear if the audit fails.'
+    validations:
+      required: true
+  - type: textarea
+    id: audit-failure-description
+    attributes:
+      label: Audit failure description
+      description: 'This description will be included with the failure message. It should include details of what should be fixed, and a link to further documentation on how to fix the issue.'
+    validations:
+      required: true
+  - type: dropdown
+    id: audit-severity
+    attributes:
+      label: Audit severity
+      description: "The severity will determine the impact to the page's overall score in the given compliance bucket."
+      options:
+        - 'High = Severe impact to page compliance'
+        - 'Medium = Moderate impact to page compliance'
+        - 'Low = Low impact to page compliance'
+    validations:
+      required: true
