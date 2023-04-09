@@ -1,0 +1,30 @@
+{
+  "name": "Beacon for IBM.com",
+  "version": "0.1.0",
+  "minimum_chrome_version": "72",
+  "manifest_version": 2,
+  "description": "@ibmdotcom/beacon is an open-source, automated tool for improving the performance, quality, and correctness of your IBM.com pages.",
+  "icons": {
+    "16": "images/16x16-light.png",
+    "128": "images/128x128-light.png"
+  },
+  "content_security_policy": "script-src 'self' https://1.www.s81c.com; object-src 'self'",
+  "background": {
+    "scripts": ["scripts/background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
+  ],
+  "browser_action": {
+    "default_icon": {
+      "32": "images/32x32-mid.png"
+    },
+    "default_title": "Beacon",
+    "default_popup": "popup.html"
+  }
+}
