@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: gatherers/page-data/ddo/ddo-gatherer.js</title>
+    <title>JSDoc: Source: clients/extension/scripts/popup.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: gatherers/page-data/ddo/ddo-gatherer.js</h1>
+    <h1 class="page-title">Source: clients/extension/scripts/popup.js</h1>
 
     
 
@@ -26,43 +26,42 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
- * Copyright IBM Corp. 2016, 2021
- *
- * This source code is licensed under the Apache-2.0 license found in the
- * LICENSE file in the root directory of this source tree.
- */
-'use strict';
-
-const Gatherer = require('lighthouse').Gatherer;
+            <pre class="prettyprint source linenums"><code>const API_URL = `https://beacon-for-ibm-dotcom-api.gz4o4xx2g28.us-south.codeengine.appdomain.cloud`;
+const PAGE_URL = window.location;
+const TEST_URL = `https://beacon-for-ibm-dotcom-api.gz4o4xx2g28.us-south.codeengine.appdomain.cloud/?url=https://www.ibm.com`;
 
 /**
- * Gatherer to return the DDO (Digital Data Object) if present on page.
- *
- * @returns {object} Digital Data Object
+ * Audit current page with @ibmdotcom/beacon
  */
-class CheckDDO extends Gatherer {
-  /**
-   * @param {object} options Gatherer options
-   * @returns {*} Gatherer artifact
-   */
-  afterPass(options) {
-    const driver = options.driver;
-    return (
-      driver
-        .evaluateAsync('window.digitalData')
-        // Ensure returned value is what we expect.
-        .then((loadMetrics) => {
-          if (!loadMetrics) {
-            throw new Error('Unable to find load metrics in page');
-          }
-          return loadMetrics;
-        })
-    );
-  }
+function auditPage() {
+  // console.log(`auditing {API_URL}/?url=${PAGE_URL}`);
+  // `${API_URL}/?url=${PAGE_URL}`
+  // fetch(`${TEST_URL}`)
+  //   .then((response) => response.json())
+  //   .then((data) => console.log('data', data));
+  console.log('auditing');
+
+
+  chrome.tabs.query({ 'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT },
+    function (tabs) {
+      window.open(`${API_URL}/?url=` + tabs[0].url);
+    }
+  );
+  // chrome.runtime.sendMessage(`${TEST_URL}`, (response) => console.log('response:', response));
 }
 
-module.exports = CheckDDO;
+/**
+ *
+ */
+async function init() {
+  const analyzeBtn = document.getElementById('analyze-button');
+  // const btn = document.querySelector('button.click-button');
+  analyzeBtn.addEventListener('click', () => {
+    auditPage();
+  });
+}
+
+init();
 </code></pre>
         </article>
     </section>
